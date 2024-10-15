@@ -15,4 +15,10 @@ const logger = createLogger({
   ],
 });
 
+logger.stream = {
+  write: function (message) {
+    logger.info(message.trim());
+  },
+};
+
 module.exports = logger;

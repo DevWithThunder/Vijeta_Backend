@@ -9,6 +9,7 @@ exports.register = async (userData) => {
 };
 
 exports.login = async ({ email, password }) => {
+  console.log(email);
   const user = await User.findOne({ email });
   if (!user || !(await user.comparePassword(password))) {
     throw new Error("Invalid credentials");

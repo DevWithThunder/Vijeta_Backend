@@ -1,15 +1,15 @@
 exports = module.exports = Unauthorized;
 
 function Unauthorized(msg) {
-  let errResponse ={};
-  errResponse.name = 'Unauthorized';
+  let errResponse = {};
+  errResponse.name = "Unauthorized";
   errResponse.code = 401;
   errResponse.msg = {
-    'error': 'Unauthorized_Access',
-    'description': 'Please try with correct credentials'
+    error: "Unauthorized_Access",
+    description: "Please try with correct credentials",
   };
 
-  if (msg && msg instanceof String || typeof (msg) === 'string') {
+  if ((msg && msg instanceof String) || typeof msg === "string") {
     errResponse.msg.description = msg;
   } else if (msg) {
     errResponse.msg = msg;
