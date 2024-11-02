@@ -1,0 +1,18 @@
+{
+  "local": {
+    "stage": "local",
+    "BASE_PATH": "https://dev.vijeta.com"
+  },
+  "dev": {
+    "stage": "dev",
+    "BASE_PATH": "https://dev.vijeta.com"
+  },
+  "uat": {
+    "stage": "dev",
+    "BASE_PATH": "https://dev.vijeta.com"
+  },
+  "prod": {
+    "stage": "prod",
+    "BASE_PATH": "https://prod.vijeta.com"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "vijeta",
+  "version": "1.0.0",
+  "description": "The Vijeta is a Node.js-based backend for managing hair cutting salon's customer remainders. It allows salons to maintain customer profiles, and send automated reminders for upcoming haircuts and shaves. With its fast and secure design, this system enhances customer engagement and streamlines salon operations.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "node app.js -e local -p 3000",
+    "local:dev": "nodemon app.js -- -e local -p 3000",
+    "start": "node app.js -e dev -p 3000",
+    "uat": "node app.js -e uat -p 3000",
+    "prod": "node app.js -e prod -p 3000"
+  },
+  "author": "Thunder",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "minimist": "^1.2.8",
+    "mongoose": "^8.5.4",
+    "morgan": "^1.10.0",
+    "winston": "^3.14.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0"
+  }
+}
