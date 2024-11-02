@@ -1,0 +1,5 @@
+2024-11-02T19:12:02.322Z -- [32minfo[39m: MongoDB connected successfully
+2024-11-02T19:12:11.174Z -- [31merror[39m: You are Unauthorised! Mandatory headers are missing
+2024-11-02T19:12:11.180Z -- [32minfo[39m: GET / 401 3.432 ms
+2024-11-02T19:12:11.411Z -- [31merror[39m: You are Unauthorised! Mandatory headers are missing
+2024-11-02T19:12:11.412Z -- [32minfo[39m: GET /favicon.ico 401 0.690 ms
