@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
+const DataBaseError = require("../utils/error_module/DataBaseError");
 
 const UserSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -16,6 +17,10 @@ UserSchema.pre("save", async function (next) {
 });
 
 UserSchema.methods.comparePassword = async function (candidatePassword) {
+  if (!candidatePassword) {
+    throw DataBaseError("Invalid credentials");
+  }
+  console.log("candidatePassword::: ", candidatePassword);
   return bcrypt.compare(candidatePassword, this.password);
 };
 

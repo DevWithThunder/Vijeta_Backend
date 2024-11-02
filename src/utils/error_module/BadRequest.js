@@ -2,14 +2,14 @@ exports = module.exports = BadRequest;
 
 function BadRequest(msg) {
   let errResponse = {};
-  errResponse.name = 'BadRequest';
+  errResponse.name = "BadRequest";
   errResponse.code = 400;
   errResponse.msg = {
-    'error': 'Invalid_Request',
-    'description': 'Invalid Request'
+    error: "Invalid_Request",
+    description: "Invalid Request",
   };
 
-  if (msg && msg instanceof String || typeof (msg) === 'string') {
+  if ((msg && msg instanceof String) || typeof msg === "string") {
     errResponse.msg.description = msg;
   } else if (msg) {
     errResponse.msg = msg;

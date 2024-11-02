@@ -6,7 +6,7 @@ function Unauthorized(msg) {
   errResponse.code = 401;
   errResponse.msg = {
     error: "Unauthorized_Access",
-    description: "Please try with correct credentials",
+    description: "You are Unauthorised! Mandatory headers are missing",
   };
 
   if ((msg && msg instanceof String) || typeof msg === "string") {

@@ -42,11 +42,9 @@ app.use(
 // CORS Options
 const corsOptions = {
   origin: (origin, callback) => {
-    console.log(origin);
     if (origin === environment.BASE_PATH) {
       return callback(null, true);
     }
-    console.log(Unauthorized(RETURN_STRINGS.UNAUTHORISED_FOR_MISSING_HEADER));
     return callback(
       Unauthorized(RETURN_STRINGS.UNAUTHORISED_FOR_MISSING_HEADER)
     );
@@ -63,7 +61,7 @@ app.use(errorHandler);
 app.use("/", routes);
 
 // Set port
-app.set("port", args.p || process.env.PORT || 5000);
+app.set("port", args.p || process.env.PORT || 3000);
 const PORT = app.get("port");
 
 // Start server
